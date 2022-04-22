@@ -89,7 +89,7 @@ def check_inputs_outputs(tx: Transaction):
     assert in_value == out_value, "validation: input and output values don't match"
 
 
-def check_witness_and_signature(tx: Transaction, idx: int):
+def check_witness_and_signature(tx: Transaction):
     txid = tx.tx_id()
     for idx, full_committment in enumerate(tx.witnesses):
         # get the pubkey (first 32 bytes)
